@@ -1,8 +1,12 @@
 <?php 
 //Settings
 	$dir = "./";
-	$ignoreds = [".", "..", ".DS_Store"];
-
+	$ignoreds = [".", "..", ".DS_Store", "assets"];
+	$logo = "assets/dossier.png";
+	$logoSize = "225x225";
+	$title = "DirManager";
+	$underlined = false;
+	$buttonText = "Go";
  ?>
 
 
@@ -11,8 +15,9 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Dir Manager</title>
+	<title><?php echo $title; ?></title>
 	<link rel="stylesheet" type="text/css" href="index.css">
+	<link rel="icon" type="image/png" sizes="<?php echo $logoSize; ?>" href="<?php echo $logo; ?>">
 </head>
 <body>
 	<ul class="tilesWrap">
@@ -26,9 +31,9 @@
 					?>
 						<a href="./<?php echo $dir; ?>">
 							<li>
-								<h2>0<?php echo $dirn; ?></h2>
+								<h2 class="<?php if ($underlined) { echo "underline"; } ?>">0<?php echo $dirn; ?></h2>
 								<h3><?php echo $dir; ?></h3>
-								<button>Go</button>
+								<button><?php echo $buttonText; ?></button>
 							</li>
 						</a>
 					<?php 

@@ -86,6 +86,9 @@ body {
 .tilesWrap li:hover h2 {
 	top: 0px;
 	opacity: 0.4;
+}
+
+.tilesWrap li:hover h2.underline {
 	text-decoration: underline;
 }
 
