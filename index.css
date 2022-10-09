@@ -66,7 +66,6 @@ body {
 	opacity: 0;
 	left: -140px;
 	border-radius: 0 20px 20px 0;
-	z-index: -1;
 	transition: all 0.3s ease-in-out;
 	
 }
@@ -94,6 +93,16 @@ body {
 
 .li:hover h2.underline {
 	text-decoration: underline;
+}
+
+.li:hover h3
+{
+	animation: hover 3s linear infinite;
+}
+
+.li:hover h2 
+{
+	animation: hovers 3s linear infinite;
 }
 
 .li:before {
@@ -141,3 +150,56 @@ background: linear-gradient(to right, #ffc500, #c21500);
 background: -webkit-linear-gradient(to right, #0ABFBC, #FC354C);
 background: linear-gradient(to right, #0ABFBC, #FC354C);
 }
+
+@keyframes hover 
+{
+	0% {transform: rotate(-5deg);}
+	50% {transform: rotate(5deg);}
+	100% {transform: rotate(-5deg);}
+}
+
+@keyframes hovers 
+{
+	0% { transform : rotate3d(0); }
+	50% { transform: rotate3d(1, 1, 1, 45deg); }
+	100% { transform : rotate3d(0); }
+}
+
+.form 
+{
+	display: flex;
+}
+
+.searchBar
+{
+	width: 200px;
+	height: 30px;
+	border-radius: 20px;
+	text-align: center;
+	position: fixed;
+	left: 50%;
+	top: 3px;
+	transform: translateX(-50%);
+	-webkit-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+}
+.submit 
+{
+	position: fixed;
+	top: 3px;
+	left: calc(50% + 125px);
+	transform: translateX(-50%);
+	-webkit-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	border: 1px solid black;
+	border-radius: 50%;
+	height: 40px;
+	width: 40px;
+
+}
+
+
+
+
+
+

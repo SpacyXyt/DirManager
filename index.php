@@ -20,6 +20,10 @@
 	<link rel="icon" type="image/png" sizes="<?php echo $logoSize; ?>" href="<?php echo $logo; ?>">
 </head>
 <body>
+	<form method="GET" action="" class="form">
+		<input type="text" name="search" class="searchBar" placeholder="Search.">
+		<input type="submit" name="submit" class="submit" value="📙">
+	</form>
 	<ul class="tilesWrap">
 		<?php 
 
