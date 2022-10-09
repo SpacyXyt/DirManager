@@ -1,6 +1,6 @@
 <?php 
 //Settings
-	$dir = "./";
+	$directory = "./chat/";
 	$ignoreds = [".", "..", ".DS_Store", "assets"];
 	$logo = "assets/dossier.png";
 	$logoSize = "225x225";
@@ -23,19 +23,20 @@
 	<ul class="tilesWrap">
 		<?php 
 
-			$dirs = scandir($dir);
+			$dirs = scandir($directory);
 			$dirn = 0;
 			foreach ($dirs as $dir) {
 				if(!in_array($dir, $ignoreds)) {
 					$dirn += 1;
 					?>
-						<a href="./<?php echo $dir; ?>">
-							<li>
-								<h2 class="<?php if ($underlined) { echo "underline"; } ?>">0<?php echo $dirn; ?></h2>
-								<h3><?php echo $dir; ?></h3>
-								<button><?php echo $buttonText; ?></button>
-							</li>
-						</a>
+					<a href="<?php echo $directory . $dir; ?>">
+						<li class="li">
+							<h2 class="<?php if ($underlined) { echo "underline"; } ?>">0<?php echo $dirn; ?></h2>
+							<h3><?php echo $dir; ?></h3>
+							<input type="button" class="redirect" value="<?php echo $buttonText; ?>"></input>
+						</li>
+					</a>
+						
 					<?php 
 				}
 			}	
